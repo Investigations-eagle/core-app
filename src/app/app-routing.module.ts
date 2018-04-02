@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-// import { LazyReportsModule } from './lazy-reports/lazy-reports.module';
+import { LazyReportsComponent } from './lazy-reports/lazy-reports.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  {
-    path: 'reports',
-    loadChildren: './lazy-reports/lazy-reports.module#LazyReportsModule'
-  }
+  { path: 'reports', component: LazyReportsComponent}
 ];
 
 @NgModule({

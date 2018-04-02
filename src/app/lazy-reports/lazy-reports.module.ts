@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReportsModule, ReportsComponent } from 'reports/dist/esm2015/reports.js';
+import { LazyReportsComponent } from './lazy-reports.component';
+import { ReportsModule } from 'reports/dist/esm2015/reports.js';
 
 @NgModule({
+  declarations: [
+    LazyReportsComponent,
+  ],
   imports: [
     CommonModule,
     ReportsModule
   ],
-  declarations: []
+  providers: [],
+  exports: [LazyReportsComponent]
 })
 export class LazyReportsModule { }
